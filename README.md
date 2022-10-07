@@ -42,16 +42,46 @@ There are several issues with this visualization that make it hard to quickly ga
 - The success and failure lines are same in magnitude and opposite in direction; the information is redundant and confuses the overall message
 - Color choice could be better: I would recolor the lines to green and red to more easily indicate which line is the positive outcome and which is the negative
 
-In the next 
+Using the plot as-is, Louise has an approximate 52% chance of having a successful initiative if she maintains the $10,000 target.  If she were to aim for a higher target, her chances of being successful continue to decrease until the target funding level hits $35K.  Depending on the scope of her play, asking for that much money without the content of a similarly targeted initiative might make it comparatively less appealing and thus not get funded.  Louise could consider crowdfunding at a lower dollar target and seeking the additional funding from investors; initiatives at a target level of $4,999 have around 20 percentage points higher chance of being successful.
+
+**The recommendation to Louise would be, based on this analysis, to launch with a goal of $4,999 and either seeking additional, more traditional funding, or scale back the play to align the budget with this target.**
+
+In the next section I have a couple alternate versions of the above plots that might provide more insight; I will provide updated recommendations for Louise based on those revised visualizations.
 
 ### Challenges and Difficulties Encountered
+Although I didn't encounter any challenges, I know that there are some areas that might provide challenging when first trying to use Excel:
+- The COUNTIFS() function can be hard to read when you have several conditions and are trying to troubleshoot an error
+- The Pivotable interface is not the most intuitive when first trying to learn it; the "classic" interface for Pivotables allowed the user to directly drag and drop elements onto the table itself.  This view is still available but buried in a formatting option.
+- When you first build a chart and want to modify the data range, it can be hard to adjust where the table is pulling the data and you might end up having additional rows or blanks that are hard to remove.  Often times it might be easier to just rebuild the table from scratch rather than try to repair a "broken" plot.
 
 ## Results
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
+### - What are two conclusions you can draw about the Outcomes based on Launch Date?
+1. Louise has the best chance of success, based on historical performance, if she launches the crowdfunding initiative in May.
+2. The likelihood of being successful decreases as the year progresses from May; it might be better to delay the launch by an entire year if she has issues and is delayed into late summer.
 
-- What can you conclude about the Outcomes based on Goals?
+### - What can you conclude about the Outcomes based on Goals?
+1. At her current funding target, Louise has about a 52% chance of a successful initiative.
+2. If she were to need more money and raise her goal, the likelihood of success goes down until around the $35K.
+3. The jump in success at the $35K - $45K levels are visual anomalies in the general downward trendline that runs as goal level increases; there might be something else about those target levels, outside of the goal itself, that determine success.
 
-- What are some limitations of this dataset?
+### - What are some limitations of this dataset?
+1. There isn't any detail about the channel or website for the crowdfunding.  A well-known site like Kickstarter has a larger audience than other methods of crowdfunding and it isn't clear the level of exposure of each of these.  
+2. There is no geographical information about the crowdfunders that backed the project.  It is hard to determine if the funding came from locals that would want to see the show versus a larger audience donating because of notoriety of the person planning the initiative.
+3. Similarly, it isn't clear where the final product, should it be sourced, be made available.  Projects with a larger global reach would be able to get more backers.
 
-- What are some other possible tables and/or graphs that we could create?
+### - What are some other possible tables and/or graphs that we could create?
+I would look at these additional tables to potentially revise my recommendations:
+1. Look at similar plots as what we looked at before but apply additional filters:
+   - Apply a geographical filter to align with where Louise is launching the play
+   - Limit the results to the last two or three years of data rather than the full 9-year span; if taste in art varies over time, more recent results could be more relevant and provide different recommendations
+   - Use some sort of text mining to look for initiatives, regardless of medium, with similar keywords or descriptions to Louise's project and see if outcomes are significantly different
+2. I also revised the visualizations we did previously.
+
+   ![Image 3: Outcomes Based on Launch Date v2](/resources/Theater_Outcomes_vs_Launch_v2.png)
+   
+   The issue I had with the first plot was that it was hard to determine the percentage of success by month because it also considered volume of launched initiatives.  With this plot we can see the percentage of successful campaigns with specific monthly percentages.  While May is still the best month to launch, based on this metric, June is also fairly close.  If Louise is concerned her initiative will get lost in the large volume of projects in May, she might delay a month to get more visibility without significantly impacting her chance of success.
+   
+   ![Image 4: Outcomes vs. Goals](/resources/Outcomes_vs_Goals_v2.png)
+   
+   I used a similar design to redo the plot for outcome by dollar range.  I wouldn't change my recommendation in this case, but the visualizain helps provide a more concrete, numeric evaluation of success likelihood relative to goal dollar range.
