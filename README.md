@@ -18,7 +18,7 @@ There are a number of decisions Louise needs to make regarding the nature of the
 Decision #3 is not a feasible option if Louise is unable to travel in order to launch her play.  And while she can modify the marketing content of the play in the crowdfunding page, it would require more advanced analytical techniques (text mining) and the data might be too dissimilar to provide any actionable insights.  Decisions 1 and 2 are much easier to influence given the available data for this analysis.
 
 ### Analysis of Outcomes Based on Launch Date
-The Excel file containing the required analysis and plots can be found here: https://github.com/ctc43f/Kickstarter_Challenge.xlsx
+The Excel file containing the required analysis and plots [can be found here.](https://github.com/ctc43f/kickstarter-analysis/blob/main/Kickstarter_Challenge.xlsx)
 
 First I conducted analysis on the success of theater-focused crowdfunding initiatives to determine if there is a target month in which launching the crowdfunding might prove more successful.  This could give Louise the option of delaying or accelerating the project if it would mean a significantly higher probability of hitting target funding, at least based on historical trends.
 
